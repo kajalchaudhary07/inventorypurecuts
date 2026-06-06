@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PureCuts - Salon Supplies Delivered</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-x-hidden pb-24">
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-primary/10">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex items-center gap-2">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center bg-primary/10 rounded-full">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Delivery to</span>
+<span class="material-symbols-outlined text-xs text-primary">expand_more</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-tight truncate max-w-[150px]">Downtown Salon District...</h2>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="relative flex items-center justify-center p-2 rounded-full hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-white dark:border-background-dark">3</span>
+</button>
+<div class="size-9 rounded-full bg-primary/20 overflow-hidden border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="User profile avatar of a stylist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzBtFLQsHYNJ-YVnNemMB7_kwyM1GwIJTmzRrs4v-9zn78lZLGn6g39910fCZID1rdWqm5OsKvFyNfexz5zsUaIV07oJGKHMgPi3Cyo9Ndw0LRocM4n_T2Pqlh-TDkClAwUNwzg4omtR6cQeWeOSU0RIUPaql4QuaYmflNdXdNmwDDw_eBvAz7NA1rgqUowW3RvlngxdqVrL-ywXUcClqjJ3UnayreEubQcPOrrWO71GFBSLrmYFuIk-z6He_iYiVfxqQXQMFbyG9o"/>
+</div>
+</div>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-xl h-12 bg-primary/5 border border-primary/10 focus-within:border-primary/40 focus-within:ring-1 focus-within:ring-primary/40 transition-all">
+<div class="flex items-center justify-center pl-4 text-primary/60">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 text-sm font-medium px-3" placeholder="Search hair color, scissors, shampoos..."/>
+</div>
+</label>
+</div>
+</header>
+<section class="p-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Categories</h3>
+<button class="text-primary text-xs font-bold uppercase tracking-widest">View All</button>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="flex flex-col items-center gap-2 group">
+<div class="aspect-square w-full rounded-2xl bg-primary/5 flex items-center justify-center group-active:scale-95 transition-transform overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional hair salon equipment and tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCat3W5ja86xelJe4O-pS8kfvzI8Gk7LGwNQ5kXvyEJ1-Fv8zfPjSlX_IPAJvck8hOA6NIEVRXhvkmGmDrmK67AtG6cnhT0bpxEFRG8omVM5IjVTX77E5A4G5WMN7duzY8ibo7pCDRWdiVIVBmVKiVmLbt9TG9dXZiyeD7vtTlTcYTMBhDC9-qBgSSlcP3FtYAzfEOyFCYgucXZXXDZctbzVxX-BPl0ULu1sNiNDU3ZVdf0jrq65WIfm8U68PCUY2BmbeO_4GIjkPpn"/>
+</div>
+<span class="text-[11px] font-bold text-slate-700 dark:text-slate-300 text-center leading-tight">Hair Care</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="aspect-square w-full rounded-2xl bg-primary/5 flex items-center justify-center group-active:scale-95 transition-transform overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Luxury skincare products in containers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXDd7TqYzddmRoxW4bPJyq_ECmz_fAGtlg3vY2NKC-HLKgFzMw1PWITl3TyhO_nZ38_lwkuX8C1MWp-3Wfh0kixYnOvKcAHN76yJZewVz7NoEeNLe_qz6_FDfgYLNppwTafQ8RwCEtkDVqNV4tiX_e0nfhew6RrlS1juSHV-QhT4_gmxcImH4B7IM370dQQs2qQKas0MsOtALaoXOi-Sb9VJX3-Ego8Yb9o1QFKQhwBE96y7ILG1x19XduMj3uk9X-YS0cVdmCb4GK"/>
+</div>
+<span class="text-[11px] font-bold text-slate-700 dark:text-slate-300 text-center leading-tight">Skin Care</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="aspect-square w-full rounded-2xl bg-primary/5 flex items-center justify-center group-active:scale-95 transition-transform overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional hair cutting tools and scissors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUfqMHpj8TYTX7rqkD14aAqWVQAnQ-RAiEqIbBRnRRKeCW8Xc2Og524tzB8WLu5_YIUVn_Xz6waTHnPqg-oqf6hTmx7EX3IexhMoqLriYSSb5OGGSh_aKEXPL2zH-IWeUjKRYumFjJs65-70jIk01x9SPejW5JVukA2SkDZM94WFxJmTKJ0w8RLA7twa7Ye1RDH9WtGPZ376buXNYzdEiJMvjSfyFpILdUN-puMF9_O1Hqe8yAqB_DBFrf85qqEFbUrM0Ni4D7Wbg8"/>
+</div>
+<span class="text-[11px] font-bold text-slate-700 dark:text-slate-300 text-center leading-tight">Tools</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="aspect-square w-full rounded-2xl bg-primary/5 flex items-center justify-center group-active:scale-95 transition-transform overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Assorted hair dye colors and brushes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxcHxK_gn9-VCzZU-DVpKIHzRo9eQqC2EQuCqVI-B8Vh8R6ddYs_8fO0KXlCGYCfADadXcdgQbYkn8QN2-qMgOTotdc1DoYEu5hqJtcMaklLkXb6TwdOvxKfgpvYjcLQpFk_srFMBH3rDbZuIyfiDb8qRFPcIMN1dXRm6DD9Bk4bInomru2y0K4JKRdg27ZsUxv7iv6k0qzkzJ4-XnN860VICt-D5LB4X1FBleV9oR5t5O85ees8x4Pb6YlR7Yif7JdZB47MrSpejU"/>
+</div>
+<span class="text-[11px] font-bold text-slate-700 dark:text-slate-300 text-center leading-tight">Color</span>
+</div>
+</div>
+</section>
+<section class="py-4">
+<div class="px-4 flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Recently Ordered</h3>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 pb-2 no-scrollbar">
+<div class="flex-shrink-0 w-32 flex flex-col gap-2">
+<div class="aspect-square rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Bottle of professional hair serum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1HEE96pZx-Ynz7qGIpP5KF9CQtHqJduNk4yTjq3uN5qjrT6LhBZBNMcUyHfttdKh8jfJvyb-pH4HnsObSKSlfGI5nZLUy0mEvh9ZHE2-tiQQIJ4vnRRXQIXtilySqGOW-Q02TC3ApPi7JcxlWTXmzSzUCxcvQM1J1DTqwrR0iiiMoZ4vPgJ_w0_hG6id0KtgGKe5hOtzALF2bWr1E7GuqqyfP5wB-FZMB9qKQ7lHGzdNCbDW_Rop0SUshh12HRyBU6vScMXu306hj"/>
+<button class="absolute bottom-1 right-1 h-7 w-7 bg-white dark:bg-slate-700 rounded-lg shadow-md flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 font-medium">L'Oréal Prof</p>
+<p class="text-xs font-bold text-slate-800 dark:text-slate-200 truncate">Série Expert Serum</p>
+<p class="text-xs font-bold text-primary mt-1">₹850</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-32 flex flex-col gap-2">
+<div class="aspect-square rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Box of professional hair color dye" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhFk23TtO4W8c5Fn2hHLVvBRW2uy5AZ3M_xncUERohbBc1PWUYjlaNqMwOSYJUyO9J2I_j9ZXHMxPi7AjO7xVEr2a7VDWhgyZAYZIRJDqN1CkIRarkq0Ry6vax7gIzCGsQZURVmSAW_zxwmWY4SMz0LAwZqAEVc8FW36nbq-zkdiDHO6kDymfbJEyRbrtms0M1Jbf9ogj66yOl9XwvY5tWdVuchimx2omPXCldc8-tss4KfojCZQFI6AQ-Am-5HtlImfHmPP5xYh67"/>
+<button class="absolute bottom-1 right-1 h-7 w-7 bg-white dark:bg-slate-700 rounded-lg shadow-md flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 font-medium">Wella Professionals</p>
+<p class="text-xs font-bold text-slate-800 dark:text-slate-200 truncate">Koleston Perfect</p>
+<p class="text-xs font-bold text-primary mt-1">₹450</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-32 flex flex-col gap-2">
+<div class="aspect-square rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Industrial size salon shampoo bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh0e_37pQZJQb3f9utIJ-hAXr0NPDNhFwAm8yDz_LNS2SsfSGjui6A_0s9SwoZnogTZhOkRoGPU_bpzG645rGZZFIKv85APngH-xcSvU12t8K2YR5lUIn1GPJkcoT9885sLZcjPaYjO0b7ywpmhrJPlX6v-iOL9nJ0AOYwo9OAAhqKD6BSO0-9nV3tO4qVUCkNL-0Oh0nvvKl8zo3PfyRdbFv-Esi-jzjJezwwD0ctrRGyDG_6C4RkXkVP8PeES_FVGX2dbKhU_ukS"/>
+<button class="absolute bottom-1 right-1 h-7 w-7 bg-white dark:bg-slate-700 rounded-lg shadow-md flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 font-medium">Matrix Biolage</p>
+<p class="text-xs font-bold text-slate-800 dark:text-slate-200 truncate">HydraSource 1L</p>
+<p class="text-xs font-bold text-primary mt-1">₹1,200</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary/5 py-6">
+<div class="px-4 flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Recommended for Your Salon</h3>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 no-scrollbar">
+<div class="flex-shrink-0 w-64 bg-white dark:bg-background-dark border border-primary/10 rounded-2xl overflow-hidden shadow-sm">
+<div class="h-32 w-full bg-slate-100 dark:bg-slate-800 relative">
+<img class="w-full h-full object-cover" data-alt="High-end professional salon chair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByvtDF2yDc9yF3johxv_dNMXhgcCmSkae0tkDe5d42_Zg-_yz2LMkjetkdLKHpLVfoOKWbECKICVSttPokRf8bK8W7D7l6pS7cewqkVkJ7hKVJDmE5KDilKERZeZ_5GtDaVAqpTgVmuxHyIZaW3aNKc57k0QL6vTxRWvnt46DlEjQfTbpoo-l6jGUqxCdnFezI8h_lfjebKt89FBuqCcF44Bb_Ov2g2mz8VGcyboP39Q6soOSVyCAcGdRTPpB0yO1B_MbKb8VPhiDc"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-md">NEW ARRIVAL</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm">Ergo-Comfort Salon Chair</h4>
+<p class="text-xs text-slate-500">Premium Leatherette</p>
+</div>
+<span class="text-sm font-bold text-primary">₹18,500</span>
+</div>
+<button class="mt-3 w-full bg-primary text-white text-sm font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                        </button>
+</div>
+</div>
+<div class="flex-shrink-0 w-64 bg-white dark:bg-background-dark border border-primary/10 rounded-2xl overflow-hidden shadow-sm">
+<div class="h-32 w-full bg-slate-100 dark:bg-slate-800 relative">
+<img class="w-full h-full object-cover" data-alt="Professional ceramic flat iron styler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPukgA2MoZQdy-gNH850SaLiD2pmr8I8YysUt2Z809Tzib9fY5KGl9BU6KfbfWab0XDiCVrQg9Mbwyf_0hEufGvnl-PVlXYz4NNql7a5PVH34rF3WGEMHT4uh0pbMslwyUfDdp1cRQ10ZVCi6ymzELaMO3HOohj-vXedNn0dofM1z_vzASjsTzvidvduKzCzM4p0FrMamAdqdC_dyDyg2WKWLGA_IrXKIgI3KC8trj-HtLz5n0RxtPIJ5NuduR9w2fbNtfRoh2A4HT"/>
+<span class="absolute top-2 left-2 bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded-md">BEST SELLER</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm">Ionic Pro Flat Iron</h4>
+<p class="text-xs text-slate-500">Titanium Ceramic</p>
+</div>
+<span class="text-sm font-bold text-primary">₹4,200</span>
+</div>
+<button class="mt-3 w-full bg-primary text-white text-sm font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<section class="p-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Popular Products</h3>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col bg-white dark:bg-slate-800/40 rounded-2xl border border-slate-100 dark:border-slate-800 p-3">
+<div class="aspect-square w-full rounded-xl bg-slate-50 dark:bg-slate-800 mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Bottles of premium salon nail lacquer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgnE1IyXmJD78xsps8yeQRFg5gillTuOPxH02TJKPUdEtP95VrnmA-df1FIMCkvb-f9oiaBs_I4Y4pLyYP1x4ubUuXMcicmo51_XL_G50zB5ANuMyObO4D45XVp6LKEZ4AMHpbcokT0WWjfe53AuIIxoEEGtmSpUxBqetevLviCqsyTsdaY6PNwpmAv7iedoOxgr_vob-pkmAtKZnBKwpmOnq_7uP37zaJxxUI9NCirPwwfamwijp0_rzdmz8r6TiAE48R6tGvdqHU"/>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">OPI Professional</p>
+<h4 class="text-sm font-bold text-slate-800 dark:text-slate-200 line-clamp-1 mb-1">Nail Lacquer Pack (12)</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100">₹3,450</span>
+<button class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-800/40 rounded-2xl border border-slate-100 dark:border-slate-800 p-3">
+<div class="aspect-square w-full rounded-xl bg-slate-50 dark:bg-slate-800 mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Deep conditioning salon hair mask" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQtTi5OT_XRDY-YujaIkb9_PEcsA67OT32giimDBdvj8WaRtx8G6fg4ohyic7VQ0drpBtNhxWsHazy8vlAyYYlRkzNj2px6umZJfFHbuMZJWAETnyRyAZED6FRvojIxKySoMx5K3XPcIGQjU2us9p7mTGnXiIFjlDTMayXWiiSFpYx1NOpemjs-S8Wao6pjZimeYqkXD8qje_NtfsvJmqW9g8kbt251FMxDzFHaTlYRUmH_9tYnT3KOfd1Q1drEqADIPFd08S-gTz"/>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">Schwarzkopf</p>
+<h4 class="text-sm font-bold text-slate-800 dark:text-slate-200 line-clamp-1 mb-1">BC Repair Rescue Mask</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100">₹950</span>
+<button class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-800/40 rounded-2xl border border-slate-100 dark:border-slate-800 p-3">
+<div class="aspect-square w-full rounded-xl bg-slate-50 dark:bg-slate-800 mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional ionic hair dryer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5FmmNmzNQ2IYKqag5ve3iQh6hYuUf2-dO8zH78Z5B4T8SOnyVBKWg7v5cSi5h-hU2w7Iek5DjJktePcNeTXsTe9MRt3jFTKOBvFFrBoE0ab2HlBFzT0Q8CGKI9b-O3Jwi3XlR-5pZPJHoog8JQYYyRGcJB810Y3TOXnuzla8EOSZM6YrvyS8e0Fe5APtK4lpJCMuByemSkB187fegmqsSb2fKo6-8YCbKRZpEFQPK46JQaqwK1icQFNWpMDjcR2yBdqHUXkoYXGp9"/>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">BaBylissPRO</p>
+<h4 class="text-sm font-bold text-slate-800 dark:text-slate-200 line-clamp-1 mb-1">Nano Titanium Dryer</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100">₹6,800</span>
+<button class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-800/40 rounded-2xl border border-slate-100 dark:border-slate-800 p-3">
+<div class="aspect-square w-full rounded-xl bg-slate-50 dark:bg-slate-800 mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Facial steaming machine for salon use" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoBtWsy1zGfBlIZI3k02XIYF8vG6OvuQMJXZeds-2Vx2IwF5n15FKHVmLJq49ANfe91burYe0HRdy2lDGAzHzyIXsM8LxlcsGLCNIVpE-lHUpdGOlQ-_S7L34lCzKY0dHyjQ7IkPBaE0Z69mAXGmGkwmJvz1gqm3PagqzPPJ82dywclpaTsCjhmjrp4Q3NiommaMmVkx82FV8X_GfQ266Jj2K1F23C6ylvD92FX3c5Hr27uayW5Do9BauDNObgxbOIrF2hJ9v6oADI"/>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">VLCC Professional</p>
+<h4 class="text-sm font-bold text-slate-800 dark:text-slate-200 line-clamp-1 mb-1">Hydrating Facial Kit</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100">₹1,500</span>
+<button class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-primary/10 z-[100]">
+<div class="flex gap-2 px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Explore</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Orders</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

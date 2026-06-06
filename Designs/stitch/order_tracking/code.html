@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track Order - PureCuts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative mx-auto max-w-md min-h-screen bg-white dark:bg-slate-900 flex flex-col shadow-xl">
+<!-- Header -->
+<div class="flex items-center p-4 sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-10">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold flex-1 text-center pr-10">Track Order</h1>
+</div>
+<!-- Order Summary Card -->
+<div class="px-4 py-2">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-5 border border-primary/10">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-semibold text-primary uppercase tracking-wider">Order ID</p>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">#PC-88291</h2>
+</div>
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-tight">On the way</span>
+</div>
+<div class="flex items-center gap-2 mt-4 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<p class="text-sm font-medium">Estimated arrival: <span class="text-slate-900 dark:text-white font-bold">2:30 PM - 3:00 PM</span></p>
+</div>
+</div>
+</div>
+<!-- Map Snippet -->
+<div class="px-4 py-4">
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern minimalist city map showing delivery route" data-location="New York City" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZHa9mPuBdrtI-DVIrwc1CqBQTFnoDqEU9v31-5AtFDXZuvy237-Aetg9OR38MC_3f5N4WCATfr-z2FbNv8-6ulRaecWGLVP3RMQnVb1IQlR7BaZvQQuJVTqvdbIUllC609xHW3jBYHin89Z5SwB5KOSZNXoKklqx167r3B71hb_QPkE69v4N4NkFvodHLW0mQr6GhyzanjSS6edNUlwd1wPWGg66pvUdflktoyZklLQQLkAX-nM34XHiQvBiL-KxRLobfAQGq4D5a')">
+</div>
+<!-- Delivery Indicator Overlay -->
+<div class="absolute top-1/2 left-1/3 size-12 -mt-6 -ml-6 bg-primary/20 rounded-full flex items-center justify-center">
+<div class="size-8 bg-primary rounded-full flex items-center justify-center text-white shadow-lg border-2 border-white">
+<span class="material-symbols-outlined text-base">delivery_dining</span>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full overflow-hidden bg-slate-200">
+<img alt="Driver" class="w-full h-full object-cover" data-alt="Delivery driver profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeeVw-i3aqZh84Tltr0Fircxfu9_tZb-hnSkOzMlt3okbc4mSTiLM9yHN5bDfIxEiNM4hcVLWpzklUNAEAoXH8yMR0IVYifjPQX2D2OD2OXRVsLIc4ZyVB9V40b2MUTiPP4qBZ9D5bo5xVMcvoipBzHqH_Rwe8lnNbhFu97KNoRVvvP0kVragotG1FXSa_RyYRITURWAl5uZ3oe7LbqrfOzSIGjg0j5ddf5l0eCoKUu4omRVCD0_9NXxtkFwDrRWVrCkMilkgZPd58"/>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Your Courier</p>
+<p class="text-xs font-bold">Marcus J.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Vertical Timeline -->
+<div class="px-8 py-6 flex-1">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Status Details</h3>
+<div class="space-y-0">
+<!-- Status: Placed -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs filled-icon">check</span>
+</div>
+<div class="w-0.5 h-10 bg-primary"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Order Placed</p>
+<p class="text-xs text-slate-500 mt-1 font-medium">May 12, 11:30 AM</p>
+</div>
+</div>
+<!-- Status: Confirmed -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs filled-icon">check</span>
+</div>
+<div class="w-0.5 h-10 bg-primary"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Confirmed</p>
+<p class="text-xs text-slate-500 mt-1 font-medium">May 12, 11:35 AM</p>
+</div>
+</div>
+<!-- Status: Processing -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs filled-icon">check</span>
+</div>
+<div class="w-0.5 h-10 bg-primary"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-none">Processing</p>
+<p class="text-xs text-slate-500 mt-1 font-medium">Your package is being prepared</p>
+</div>
+</div>
+<!-- Status: Out for Delivery -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full border-2 border-primary flex items-center justify-center text-primary bg-white dark:bg-slate-900">
+<div class="size-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="w-0.5 h-10 bg-slate-200 dark:bg-slate-800"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold text-primary leading-none">Out for Delivery</p>
+<p class="text-xs text-slate-500 mt-1 font-medium">Courier is nearby (2.4 miles away)</p>
+</div>
+</div>
+<!-- Status: Delivered -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full border-2 border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-xs">location_on</span>
+</div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold text-slate-400 dark:text-slate-600 leading-none">Delivered</p>
+<p class="text-xs text-slate-400 dark:text-slate-700 mt-1 font-medium">Expected today</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="flex gap-2 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-2 mt-auto">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-wide">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined filled-icon">receipt_long</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-wide">Orders</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-wide">Wallet</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-wide">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

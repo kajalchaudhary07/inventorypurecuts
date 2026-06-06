@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "purecuts-11a7c"
+  },
+  "targets": {
+    "purecuts-11a7c": {
+      "hosting": {
+        "admin": [
+          "purecuts-11a7c"
+        ],
+        "inventory": [
+          "purecuts-11a7c"
+        ]
+      }
+    }
+  }
+}

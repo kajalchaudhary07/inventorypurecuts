@@ -1,0 +1,197 @@
+rules_version = '2';
+
+// ========================================================================
+// COMPREHENSIVE FIRESTORE SECURITY RULES
+// Serves: Flutter App + Admin Dashboard + Inventory Dashboard
+//
+// User Types:
+// 1. PUBLIC: Anyone (no auth needed)
+// 2. AUTHENTICATED: Any signed-in user
+// 3. ADMIN: User in admins collection
+// 4. OWNER: User accessing their own data
+// ========================================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===== HELPER FUNCTIONS =====
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn() &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // ===== PUBLIC COLLECTIONS (Anyone can read) =====
+    // Catalog data - public read only
+    match /products/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+
+      // Product variants
+      match /variants/{variantId} {
+        allow read: if true;
+        allow write: if isAdmin();
+      }
+
+      // Product reviews subcollection
+      match /reviews/{reviewId} {
+        allow read: if true;
+        allow create: if signedIn();
+        allow update: if isOwner(reviewId) || isAdmin();
+        allow delete: if isAdmin();
+      }
+    }
+
+    match /brands/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /categories/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /subCategories/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /subSubCategories/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /attributes/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /banners/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /coupons/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ===== AUTHENTICATED USER COLLECTIONS =====
+    // User profiles - users can read/edit own, admins can read all
+    match /users/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid);
+      allow update: if isOwner(uid) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Verification requests - users can create own, admins manage
+    match /verificationRequests/{requestId} {
+      allow create: if signedIn();
+      allow read: if isAdmin() || (signedIn() && (
+        request.auth.uid == resource.data.userId ||
+        request.auth.uid == resource.data.uid ||
+        request.auth.uid == resource.data.customerId
+      ));
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Orders - users can read/create own, admins can manage all
+    match /orders/{orderId} {
+      allow create: if signedIn();
+      allow read: if signedIn() && (
+        isAdmin() ||
+        request.auth.uid == resource.data.uid ||
+        request.auth.uid == resource.data.userId ||
+        request.auth.uid == resource.data.customerId
+      );
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Payments - users read own, admins read all, backend creates
+    match /payments/{txnid} {
+      allow read: if signedIn() && (
+        isAdmin() || request.auth.uid == resource.data.userId
+      );
+      allow create, update, delete: if false;
+    }
+
+    // Product reviews (mirrored top-level)
+    match /productReviews/{reviewId} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update: if isAdmin() || isOwner(resource.data.userId);
+      allow delete: if isAdmin();
+    }
+
+    // Product suggestions - users create, admins manage
+    match /productSuggestions/{docId} {
+      allow create: if signedIn();
+      allow read: if isAdmin();
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Notifications - users read own, admins manage all
+    match /notifications/{docId} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+
+    // Support chats - users read own, admins read all
+    match /chats/{chatId} {
+      allow read: if isAdmin() || (signedIn() && chatId == "support_" + request.auth.uid);
+      allow create: if signedIn();
+      allow update: if isAdmin() || (signedIn() && chatId == "support_" + request.auth.uid);
+      allow delete: if isAdmin();
+
+      match /messages/{messageId} {
+        allow read: if isAdmin() || (signedIn() && parent.id == "support_" + request.auth.uid);
+        allow create: if signedIn();
+        allow update: if isAdmin();
+        allow delete: if isAdmin();
+      }
+    }
+
+    // ===== ADMIN-ONLY COLLECTIONS (Dashboards) =====
+
+    // Admin accounts
+    match /admins/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow write: if false;  // Manage from Firebase Console
+    }
+
+    // ===== ADMIN DASHBOARD COLLECTIONS =====
+    match /bot_config/{id} { allow read, write: if isAdmin(); }
+    match /bulkLeads/{id} { allow read: if isAdmin(); allow write: if false; }
+    match /rolePermissions/{id} { allow read, write: if isAdmin(); }
+    match /app_settings/{id} { allow read, write: if isAdmin(); }
+
+    // ===== INVENTORY & SALES DASHBOARD COLLECTIONS =====
+    match /itemGroups/{id} { allow read, write: if isAdmin(); }
+    match /salons/{id} { allow read, write: if isAdmin(); }
+    match /vendors/{id} { allow read, write: if isAdmin(); }
+    match /stockMovements/{id} { allow read, write: if isAdmin(); }
+    match /purchaseOrders/{id} { allow read, write: if isAdmin(); }
+    match /salesOrders/{id} { allow read, write: if isAdmin(); }
+    match /invoices/{id} { allow read, write: if isAdmin(); }
+    match /reports/{id} { allow read: if isAdmin(); allow write: if false; }
+    match /activityLogs/{id} { allow read: if isAdmin(); allow write: if false; }
+    match /inventoryProducts/{id} { allow read, write: if isAdmin(); }
+
+    // ===== DEFAULT DENY =====
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

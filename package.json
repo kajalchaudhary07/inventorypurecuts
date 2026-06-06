@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev:admin": "npm --prefix purecuts-dash run dev",
+    "dev:inventory": "npm --prefix inventory-dashboard run dev",
+    "dev": "npm run dev:admin",
+    "build:admin": "npm --prefix purecuts-dash run build",
+    "build:inventory": "npm --prefix inventory-dashboard run build",
+    "deploy:admin": "npm run build:admin && firebase deploy --only hosting --project purecuts-11a7c",
+    "deploy:inventory": "npm run build:inventory && firebase deploy --only hosting:inventory --project purecuts-11a7c"
+  },
+  "dependencies": {
+    "firebase": "^12.10.0"
+  }
+}

@@ -1,0 +1,10 @@
+# Copy this file to android/key.properties and replace all placeholders.
+# Do NOT commit android/key.properties.
+
+storePassword=REPLACE_WITH_KEYSTORE_PASSWORD
+keyPassword=REPLACE_WITH_KEY_PASSWORD
+keyAlias=upload
+# You can use a relative path from the android/ folder, or an absolute path.
+# Example (relative): ../../keystores/purecuts-upload-key.jks
+# Example (absolute): C:/Users/you/secure/purecuts-upload-key.jks
+storeFile=REPLACE_WITH_KEYSTORE_PATH

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Product Details - Salon Pro</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-primary/10">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Product Details</h2>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<div class="w-full @container">
+<div class="p-0 sm:p-4">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden aspect-square sm:rounded-xl shadow-sm" data-alt="Premium professional hair serum bottle on marble surface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXEFxoSAhhDvpwrIp9b2PuyQIoDfqMe7oRdTHYe73m2VFZwBrLcSow1-Q3LtVlmdNtEBbvtKqOP0RXQI9PoQp9JyKfCXUrqkDxYliaBt87JtQoF7T0q3ZZYYA00LFx26pRgcZ0A0aYSYxwLN5uua6-nh6DfGapRLJEgnXYjRwMU3-UFpdufGR9JO_j2zYKWXeMDLPaerCxMbkFFbgVYVqW8we386AkpCcP0zAQw5FLuzBpf2JMjP44w_gqeAx0bbW_dHVRk2cZCVmB");'>
+</div>
+</div>
+</div>
+<div class="px-4 py-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-primary font-semibold text-sm tracking-wider uppercase">L'Oreal Professionnel</p>
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight mt-1">Absolut Repair Serum</h1>
+</div>
+<div class="bg-primary/10 px-3 py-1 rounded-full">
+<span class="text-primary font-bold text-lg">$34.99</span>
+</div>
+</div>
+<div class="flex items-center gap-1 mb-6">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm text-slate-300">star</span>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-xs ml-1">(128 reviews)</span>
+</div>
+<div class="space-y-4 mb-8">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">About this product</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Professional resurfacing treatment for damaged hair. Infused with Gold Quinoa and Protein, this lightweight serum helps reduce surface damage by 77% while providing instant shine and a non-greasy finish. Perfect for all hair types.
+                    </p>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center border border-primary/20 rounded-lg p-1 bg-white dark:bg-slate-800">
+<button class="size-10 flex items-center justify-center text-primary hover:bg-primary/10 rounded">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="w-10 text-center font-bold">1</span>
+<button class="size-10 flex items-center justify-center text-primary hover:bg-primary/10 rounded">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<button class="flex-1 bg-primary text-white h-12 rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined">shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+<div class="border-t border-primary/10 pt-8 pb-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">See more like this</h3>
+<a class="text-primary text-sm font-medium" href="#">View all</a>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4">
+<div class="min-w-[160px] w-[160px] flex flex-col gap-2">
+<div class="aspect-square rounded-lg bg-white dark:bg-slate-800 overflow-hidden border border-primary/5">
+<img class="w-full h-full object-cover" data-alt="Salon hair mask professional treatment jar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6_ag6izJpADuCNmS5zNp5hCE1yKFPRmQgPktQObgFEo-1CMezXc_ankkZB44Oc0baKVRj0n5S0RdkHrWf2z7sLV7Pcf7KaZspjaNbS9nDlUa4CDz5HiBs_21M2ryDXnVd5YdUlxy2tXdV5a0m86LdfLxQheoHb0UwQdMNDWiEPm8EolPSsj19FKf3_1DAtuW4Zl9jVifrJZPYwHt2Ua4MfdKpsHx-atv0d_vbH0pr_5Yd7rfTMwqXtuItJCZiE5K8N_908KouGLfT"/>
+</div>
+<p class="text-xs font-bold truncate">Repair Mask</p>
+<p class="text-primary text-xs font-bold">$28.00</p>
+</div>
+<div class="min-w-[160px] w-[160px] flex flex-col gap-2">
+<div class="aspect-square rounded-lg bg-white dark:bg-slate-800 overflow-hidden border border-primary/5">
+<img class="w-full h-full object-cover" data-alt="Moisturizing professional shampoo bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYVR4XomfyIi2QPsYTvr2ePiqDJKVDy1bJYaCR6GAqVw3U69SJY35YrE1Bd7cy2EsckL4d0FbKcpd7qr1vVrOXGnj6Ufj60tl3n44H5P__cjJbJfenZtPAVJRNohcLTYP6KUI8RKeuU6c7gZfzeJSZFCzfBeQLjQws6DPu7mYmOzLnDNykDjBBMtpBmJr91z4wDCzowlhf0Iii9sMByCLk_LjRYLxqHUTTXPvKJar8GH6g29c_ltWVK0OcZm3B7bcR1Rw2POo4-kcD"/>
+</div>
+<p class="text-xs font-bold truncate">Moisture Shampoo</p>
+<p class="text-primary text-xs font-bold">$22.50</p>
+</div>
+<div class="min-w-[160px] w-[160px] flex flex-col gap-2">
+<div class="aspect-square rounded-lg bg-white dark:bg-slate-800 overflow-hidden border border-primary/5">
+<img class="w-full h-full object-cover" data-alt="Leave-in hair conditioner spray bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBiDTqtM4oyh-O0K3THuXplmbao2nPKejTZaylgJ8SfDwBIszbvz9NvAJTRdfwinOvrwbYJQZRghV1Dla1vKTBesoWGU_154Ult9FRP0_zY3BbL4ss9wmVSKJWovWpgiTBpVMOF1jxc0yPEGHLM39G4s0Zo0kEzeXjQ1L_O8GqCSeBx7uCFnLHfiIsJPwQvP04yHbgG3Gd3MCgfiNTM_uLZpydjwpD9etyxbxB8c0BOF2m03aud1voR6DTyVl0RkI_LP1mdz8RUo-L"/>
+</div>
+<p class="text-xs font-bold truncate">Detangling Spray</p>
+<p class="text-primary text-xs font-bold">$19.99</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="sticky bottom-0 z-10 flex gap-2 border-t border-primary/10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-primary" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Shop</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Booking</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Favorites</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium leading-normal tracking-tight">Profile</p>
+</a>
+</nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

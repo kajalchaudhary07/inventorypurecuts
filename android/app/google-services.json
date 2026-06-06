@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "285724819496",
+    "project_id": "purecuts-11a7c",
+    "storage_bucket": "purecuts-11a7c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285724819496:android:0d846b1343f519a513b51d",
+        "android_client_info": {
+          "package_name": "com.example.purecuts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285724819496-2s821i2tiuaivl962k0b2icevgrhobip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr3R1QgYZcZcF9DxjsrVwkqSQ34idV8po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285724819496-2s821i2tiuaivl962k0b2icevgrhobip.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "285724819496-g0t2d536vhqsip9hp3c8egu6v5ql0du1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.purecuts"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285724819496:android:3d78f0519383df4b13b51d",
+        "android_client_info": {
+          "package_name": "purecuts.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285724819496-06qa87otkvj51hru7puq6v6hi46fk8tp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "purecuts.in",
+            "certificate_hash": "6a08164d69e55b3fc9b498cd3ef9fba01ae5e85f"
+          }
+        },
+        {
+          "client_id": "285724819496-cosq9jt23i0dk68lel7618gqturf6a3f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "purecuts.in",
+            "certificate_hash": "5f24af14f3462f822892af18d25df005f58635f1"
+          }
+        },
+        {
+          "client_id": "285724819496-rinceluhmud70mtudsc7etjv5bau23bk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "purecuts.in",
+            "certificate_hash": "ac01789d82bb3dba81b91569b7243d9743450f83"
+          }
+        },
+        {
+          "client_id": "285724819496-2s821i2tiuaivl962k0b2icevgrhobip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr3R1QgYZcZcF9DxjsrVwkqSQ34idV8po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285724819496-2s821i2tiuaivl962k0b2icevgrhobip.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "285724819496-g0t2d536vhqsip9hp3c8egu6v5ql0du1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.purecuts"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

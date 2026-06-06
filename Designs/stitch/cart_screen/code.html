@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col bg-white dark:bg-background-dark max-w-md mx-auto shadow-2xl">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Your Cart</h2>
+</div>
+<!-- Cart Items List -->
+<div class="flex flex-col gap-1 p-2">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 py-4 rounded-xl border border-transparent hover:border-primary/20 transition-all">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shadow-sm border border-slate-100 dark:border-slate-800" data-alt="Premium organic skincare serum bottle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1x-_4KXFjv-HPnwWnTCkg1FDuPmfDjr9pcAUufqw9X69709OzDBqeL0WffiKLITA0kf8a4w8xFBIEtYAsqAa5PpAvTmZy4GaHHxDq4u4T9bPMKGDFyC_eS9Z6HN9mydeteQJReSRhSw3m3iPJqCg-OuwejpAPB0Mad6TvvA7z5OSnRYsws81qZcAKGnl2EzOxIbHqAE1LPpxFSNxujeHvA6MJw0qsUlzO4PX-KXn0nDHSqp_ICh1XgdzB1EgecyWYo72Dy6AuRiMK");'></div>
+<div class="flex flex-col justify-between flex-1 h-20 py-1">
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-tight line-clamp-1">PureCuts Rejuvenating Serum</p>
+<p class="text-primary text-sm font-medium mt-1">$48.00</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800/50 p-1 rounded-full">
+<button class="text-slate-600 dark:text-slate-400 flex h-7 w-7 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="text-sm font-bold w-4 text-center">1</span>
+<button class="text-slate-600 dark:text-slate-400 flex h-7 w-7 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 py-4 rounded-xl border border-transparent hover:border-primary/20 transition-all">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shadow-sm border border-slate-100 dark:border-slate-800" data-alt="Artisanal organic hair clay jar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9dQFUi2JmjS2ghH_nlHN-RUahzeD1Kvy0yNqmERV3mXLoSItA9IXNQr9FBiXdXkNvwQVZTL3Bpr-NLC8xs0jqkfaisjXEixL21iEbPR5X1EnBGhDTTNah1uSPyXZR0aU3X1iqqsU7JPUX9FZasd63L3u_8OxIiFnUxD9DkvX4WGSJGIrlEpXGU0B9Rh8HticwTy4nMDcRij2Df5vhILWTxtNJV9yTB6MjrxAV4-BqRNCWmsCENtVLj3cTBhpQpg8sJySiqkFHcvLD");'></div>
+<div class="flex flex-col justify-between flex-1 h-20 py-1">
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-tight line-clamp-1">Matte Texture Clay</p>
+<p class="text-primary text-sm font-medium mt-1">$22.00</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800/50 p-1 rounded-full">
+<button class="text-slate-600 dark:text-slate-400 flex h-7 w-7 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="text-sm font-bold w-4 text-center">2</span>
+<button class="text-slate-600 dark:text-slate-400 flex h-7 w-7 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 py-4 rounded-xl border border-transparent hover:border-primary/20 transition-all">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shadow-sm border border-slate-100 dark:border-slate-800" data-alt="Luxury facial cleansing foam" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqvOB8ZwE6JSzzk48hgC0ed6aDBi2pKxC4vLPs4lAQhxcPe3DwJJnbkzldDIPK2vifqvBd3NuTGKZ1pTO2L8ZIGSyWT75iPkaO8MfOo37f9xb5jqEwNLMLaXl7Z8iuZagVS-vlHLn6a5Bg0gzvCo6gb2DrsgE0xpVgW-FOBlz-YOyFNznTfjdQ0m6RAzxsLVR-YM8oAXcx6NjQNrcAJVd_UhfvkB6AYt632aneZDrRNbLylrlLrsOV9niHMitTacOBVL95SBEWJhlp");'></div>
+<div class="flex flex-col justify-between flex-1 h-20 py-1">
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-tight line-clamp-1">Gentle Cleansing Foam</p>
+<p class="text-primary text-sm font-medium mt-1">$35.00</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800/50 p-1 rounded-full">
+<button class="text-slate-600 dark:text-slate-400 flex h-7 w-7 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="text-sm font-bold w-4 text-center">1</span>
+<button class="text-slate-600 dark:text-slate-400 flex h-7 w-7 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Section -->
+<div class="px-6 py-8 pb-32">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight mb-4">Order Summary</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-slate-600 dark:text-slate-400">
+<p class="text-sm">Subtotal</p>
+<p class="text-sm font-medium">$127.00</p>
+</div>
+<div class="flex justify-between items-center text-slate-600 dark:text-slate-400">
+<p class="text-sm">Shipping</p>
+<p class="text-sm font-medium text-green-500">FREE</p>
+</div>
+<div class="flex justify-between items-center text-slate-600 dark:text-slate-400">
+<p class="text-sm">Tax</p>
+<p class="text-sm font-medium">$10.16</p>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 my-4"></div>
+<div class="flex justify-between items-center text-slate-900 dark:text-slate-100">
+<p class="text-base font-bold">Total</p>
+<p class="text-xl font-bold">$137.16</p>
+</div>
+</div>
+<!-- Promo Code -->
+<div class="mt-8 flex gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">sell</span>
+<input class="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary/50 text-sm" placeholder="Promo code" type="text"/>
+</div>
+<button class="px-6 py-3 bg-slate-900 dark:bg-slate-700 text-white rounded-xl text-sm font-bold">Apply</button>
+</div>
+</div>
+<!-- Sticky Checkout Bar -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 p-4 pb-8 z-20">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider font-bold">Total Amount</p>
+<p class="text-2xl font-black text-slate-900 dark:text-slate-100">$137.16</p>
+</div>
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white py-4 px-6 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/25 active:scale-[0.98] transition-all">
+<span>Proceed to Checkout</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

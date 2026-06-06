@@ -1,0 +1,49 @@
+{
+  "functions": {
+    "source": "functions"
+  },
+  "hosting": [
+    {
+      "target": "admin",
+      "public": "purecuts-dash/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/p/**",
+          "destination": "/product-redirect.html"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "inventory",
+      "public": "inventory-dashboard/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "flutter": {"platforms":{"android":{"default":{"projectId":"purecuts-11a7c","appId":"1:285724819496:android:0d846b1343f519a513b51d","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"purecuts-11a7c","configurations":{"android":"1:285724819496:android:0d846b1343f519a513b51d","ios":"1:285724819496:ios:2237a1daf659b7e913b51d","macos":"1:285724819496:ios:2237a1daf659b7e913b51d","web":"1:285724819496:web:aec9d12d0eba297b13b51d","windows":"1:285724819496:web:7eb61df6e98ff97113b51d"}}}}}
+}

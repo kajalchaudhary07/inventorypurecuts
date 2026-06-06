@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>PureCuts | Professional Haircare</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="text-primary flex size-10 items-center justify-center rounded-lg bg-primary/10">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">PureCuts</h2>
+</div>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 size-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Filter Bar -->
+<nav class="sticky top-[72px] z-40 bg-white dark:bg-background-dark border-b border-primary/10 overflow-x-auto no-scrollbar">
+<div class="flex gap-3 p-3 max-w-7xl mx-auto">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/10 px-4 hover:bg-primary/20 transition-colors">
+<span class="text-sm font-semibold">Brand</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/10 px-4 hover:bg-primary/20 transition-colors">
+<span class="text-sm font-semibold">Price Range</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/10 px-4 hover:bg-primary/20 transition-colors">
+<span class="text-sm font-semibold">Category</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="ml-auto flex items-center pr-2">
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">tune</span>
+<span class="text-sm font-semibold">All Filters</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Product Grid -->
+<main class="max-w-7xl mx-auto p-4">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+<!-- Product Card 1 -->
+<div class="group flex flex-col bg-white dark:bg-slate-800/40 rounded-xl overflow-hidden shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional styling spray bottle on white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6rivt1fKabrk0ttOAvEPcA8edUEXzyklSIGzhhC34iy8hxEXWWP8LVS65fk34bMZmMgCpV6XdaFskZeyiCyUGyE6ohz5hPjWjBcXfVrKUQGCjvc-FQJSJYs_9W9M2gA_rZEJKA-J4lQP-kmUTi0zAwPWWmB89y2Y7BcNp4CaXuTKf3c_AUw2rOk_yc4Iq0ULjJ6LGvfyfSw-FKoVsGaWyuj9dQf30wp4oD-JP8naOT7nUg9MzgRw1TL7zNz0GmcJZPjWUH5kaTI-r");'></div>
+<button class="absolute top-2 right-2 size-8 flex items-center justify-center bg-white/80 backdrop-blur rounded-full text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">PureCuts Pro</p>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base mb-1 line-clamp-1">Texturizing Sea Salt Spray</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Volume &amp; Hold</p>
+<div class="mt-auto flex items-center justify-between gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100">$24.00</span>
+<button class="flex items-center justify-center size-10 bg-primary text-white rounded-lg hover:shadow-lg hover:shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-slate-800/40 rounded-xl overflow-hidden shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional shampoo and conditioner bottles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqHHuefMT20r3nUYy0kheDi4e-9gHc2KUQPuBTWWlSfygGyTOIL5f2NvQNnkuSrJlNox2S9nv2shv5NYWFdVJ_YnCgzDUuOI9rpzDcdXU7EHbytNKbjDbJq5JoLl0FYzzYGYtJTvyPNqA5J79ETemYbmIu3Fmuv1xxREL1iAgMzLFMJsEpyzJ1n6EeQxP0kw45zoIZtfc7kflFZuWYIecpFqaH5OywD0YQAL_imdXW5s9upWX8VlLbaByNTm7ZrbM9ne9YMLd1fTXh");'></div>
+<button class="absolute top-2 right-2 size-8 flex items-center justify-center bg-white/80 backdrop-blur rounded-full text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">SilkStyle</p>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base mb-1 line-clamp-1">Hydrating Daily Shampoo</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Paraben Free</p>
+<div class="mt-auto flex items-center justify-between gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100">$18.50</span>
+<button class="flex items-center justify-center size-10 bg-primary text-white rounded-lg hover:shadow-lg hover:shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-slate-800/40 rounded-xl overflow-hidden shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Jar of professional hair matte clay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPu7j3YQzINxNLs_pbGZYvumPHc_s7lvE1H4asXuZUdIM7enc2ry8HvIvECRpwLUDeYHqL-Ivv-uk1bse5DVyUBXaIABzkEyNSJEUWMnUO1N0H2dREOj7cDBdwyX-289ViI3S9UT3f89ObDMu0dQ2JgNlwAhQ3E3ovI8JIJ5CVkEMlCh-X9bbBSkbrsEghUXc2KVJyhqeXz9diTD6VF7hMaTklyeNxFlyhdKOybVLSYSQnqFpEGwqWajy7v-sjDtiTViP-b3LuvUI8");'></div>
+<button class="absolute top-2 right-2 size-8 flex items-center justify-center bg-white/80 backdrop-blur rounded-full text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">PureCuts Pro</p>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base mb-1 line-clamp-1">Matte Sculpting Clay</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Strong Hold</p>
+<div class="mt-auto flex items-center justify-between gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100">$22.00</span>
+<button class="flex items-center justify-center size-10 bg-primary text-white rounded-lg hover:shadow-lg hover:shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col bg-white dark:bg-slate-800/40 rounded-xl overflow-hidden shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Premium beard oil bottle with dropper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIRAZgXXwHUila-ewgNWT0eMsBILcR-t5os0Qb07JhO3FIFkqAnfmGms1BM6ykVY677kao2iP7RioxTKtFC6R_HnLP7iv9p3qtF1vE4H0bV73OVd82tU0Cf7uu5fgWFHdRx75GxMr1W8o9sAo637lwXBicO1gts7YxjVD7dNgXDrW-zK1qyLZ8Tl7-xugFfx46dH8KqJ7n3bA6Ezcp4aVpUt_g6f3HokXu_S_yQbK42w2ZNTahqKUgtmvkph2lVWNchw6I2wbDVK57");'></div>
+<button class="absolute top-2 right-2 size-8 flex items-center justify-center bg-white/80 backdrop-blur rounded-full text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">GroomMaster</p>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base mb-1 line-clamp-1">Cedarwood Beard Oil</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Nourishing</p>
+<div class="mt-auto flex items-center justify-between gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100">$15.00</span>
+<button class="flex items-center justify-center size-10 bg-primary text-white rounded-lg hover:shadow-lg hover:shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col bg-white dark:bg-slate-800/40 rounded-xl overflow-hidden shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional grade hair trimmer silver" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDqtN8cHzoh1VhoRzVFsg4vp1XlTaFd449dWvVTQxOi1Pz7XTVvGJ_jcmHY4qzqP9SLte2WL81pKZnCBxC2FITYr7a18bTe8Xb3lGetw9wsbSDCsIONtfIxmILV93FvwHGyoq8nL8v9xWQepFiKiqdrnpgi6rVxGvgRHsJHcQ7vz6Ma1PXB61qT8mzilOqEkc6Nd63qjNAzpc7jhVqdYDuifghGq_7jn_ENsnKSl-6ug76V0H3Q1QEoGAyL-qIgCcsxOTtokYBQKMp");'></div>
+<button class="absolute top-2 right-2 size-8 flex items-center justify-center bg-white/80 backdrop-blur rounded-full text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">EliteCut</p>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base mb-1 line-clamp-1">Pro Wireless Trimmers</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Zero Gap Blades</p>
+<div class="mt-auto flex items-center justify-between gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100">$120.00</span>
+<button class="flex items-center justify-center size-10 bg-primary text-white rounded-lg hover:shadow-lg hover:shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col bg-white dark:bg-slate-800/40 rounded-xl overflow-hidden shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Styling pomade tin on wood" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwmuTm6Ed-krWRoRuPvA3_kXq8oRs5_UTtzfjoY_CqospxJo7JpxQHLr2qzY97vQ8r2y35IksXLrno4395bnJFcAnnRWUSwGIzH42jacYQDJXPf0hC_CZoeg3lXnaRVoQQ6aG4NHpdq_IgMjeh08xkAGTVzk4XIdAeutFesxknVbMOQTifB9Bw4ch8RDAZyw5TcuvZGUDiF0nN8OXCI_c1SAXyv8R85dMy72NPsEph4oBpaIMZp9SFcYLf7IdKPM4d-jkw7IeGWrdk");'></div>
+<button class="absolute top-2 right-2 size-8 flex items-center justify-center bg-white/80 backdrop-blur rounded-full text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">PureCuts Pro</p>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base mb-1 line-clamp-1">Classic High Shine Pomade</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Vintage Finish</p>
+<div class="mt-auto flex items-center justify-between gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100">$19.95</span>
+<button class="flex items-center justify-center size-10 bg-primary text-white rounded-lg hover:shadow-lg hover:shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<footer class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-primary/10 px-4 pb-6 pt-3 z-50">
+<div class="max-w-md mx-auto flex items-center justify-around">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-[1]">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Shop</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Discover</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Orders</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</div>
+</footer>
+<!-- Floating Action for Cart (Mobile Context) -->
+<div class="fixed bottom-24 right-6 lg:hidden">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-xl shadow-primary/40 hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">shopping_basket</span>
+</button>
+</div>
+<!-- Padding for footer -->
+<div class="h-28"></div>
+</body></html>

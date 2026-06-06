@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>PureCuts - Checkout</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto bg-white dark:bg-slate-900 min-h-screen shadow-xl flex flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Checkout</h1>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-32">
+<!-- Delivery Address Section -->
+<section class="p-4 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Delivery Address</h3>
+<button class="text-primary text-sm font-semibold hover:underline">Change</button>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold">Home</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">452 Willow Lane, Sunset District, San Francisco, CA 94122</p>
+</div>
+</div>
+</section>
+<!-- Order Summary Section -->
+<section class="p-4 border-b border-slate-100 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">Order Summary</h3>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 border border-slate-100 dark:border-slate-800" data-alt="Fresh cut premium ribeye steak on a wood board" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMiC4Ou_m5T8VDvi9lmQc9ixBEeZEwxsAZDo6yoW7HIYIdpRshACMJKRE0oQiR3wQmrKFApE3rqQXtdZ5oSKe7-rbdQcvVM8Ndla-qHtcOwS_Fvxk8JkIYKZCl-uNink4ksUuuMDQHzS4sbn8vs6A4jExbX3BoUKkCamyaW83G0sv-nxV07PKDuzPTz0P146-bmaI-j7SL7auuJVKivupZOacIi1_YVrqsl8YF6WNzBn32OfK5Lp-WhZnGTTJPgf_Bf9Razq_X5uFH");'></div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Premium Ribeye (500g)</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Qty: 1 • Grass-fed</p>
+</div>
+<div class="text-slate-900 dark:text-slate-100 font-semibold">$24.50</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 border border-slate-100 dark:border-slate-800" data-alt="Thinly sliced organic chicken breast" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOy0M26MQ0SjXqYGIFVMrHdw4vqrXkE6OC75Tb8Y-rm0V6CDY3tqYoEzFxO5oCz1A_NPGNn3o43cHlAyEGaSK_190KwZzqjXsDEXk8nhjphAMLT2rPNt_ddvv_E8Je3M7oWabNJVuWc36BOr5bXimkVUoxP7moXlXbYcpdlBg8yeNDPZLCTlT-ZjV3D9wRRjJ8AHsdaMUCEUw1kKfRMpwX9l9wK9gm2pdFv1AfpGeFe-pwwyyGKk1-jsprtwS4TcL_9jfBpkjsYsbz");'></div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Organic Chicken Breast</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Qty: 2 • Antibiotic-free</p>
+</div>
+<div class="text-slate-900 dark:text-slate-100 font-semibold">$18.00</div>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="mt-6 pt-4 border-t border-dashed border-slate-200 dark:border-slate-700 space-y-2">
+<div class="flex justify-between text-sm text-slate-500 dark:text-slate-400">
+<span>Subtotal</span>
+<span>$42.50</span>
+</div>
+<div class="flex justify-between text-sm text-slate-500 dark:text-slate-400">
+<span>Delivery Fee</span>
+<span class="text-green-600 dark:text-green-400">Free</span>
+</div>
+<div class="flex justify-between text-sm text-slate-500 dark:text-slate-400">
+<span>Taxes &amp; Charges</span>
+<span>$3.40</span>
+</div>
+<div class="flex justify-between text-lg font-bold text-slate-900 dark:text-slate-100 pt-2">
+<span>Total</span>
+<span>$45.90</span>
+</div>
+</div>
+</section>
+<!-- Payment Method Section -->
+<section class="p-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">Payment Method</h3>
+<div class="space-y-3">
+<!-- UPI Option -->
+<label class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer">
+<input checked="" class="w-5 h-5 text-primary focus:ring-primary border-slate-300" name="payment" type="radio"/>
+<div class="flex items-center gap-3 flex-1">
+<div class="size-8 flex items-center justify-center bg-white dark:bg-slate-800 rounded shadow-sm">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<span class="font-medium">UPI (GPay, PhonePe)</span>
+</div>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</label>
+<!-- Card Option -->
+<label class="flex items-center gap-4 p-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors cursor-pointer">
+<input class="w-5 h-5 text-primary focus:ring-primary border-slate-300" name="payment" type="radio"/>
+<div class="flex items-center gap-3 flex-1">
+<div class="size-8 flex items-center justify-center bg-white dark:bg-slate-800 rounded shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">credit_card</span>
+</div>
+<span class="font-medium">Credit / Debit Card</span>
+</div>
+</label>
+<!-- Cash Option -->
+<label class="flex items-center gap-4 p-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors cursor-pointer">
+<input class="w-5 h-5 text-primary focus:ring-primary border-slate-300" name="payment" type="radio"/>
+<div class="flex items-center gap-3 flex-1">
+<div class="size-8 flex items-center justify-center bg-white dark:bg-slate-800 rounded shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">payments</span>
+</div>
+<span class="font-medium">Cash on Delivery</span>
+</div>
+</label>
+</div>
+</section>
+</main>
+<!-- Fixed Footer -->
+<footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white dark:bg-slate-900 p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between mb-4 px-2">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 uppercase tracking-wider font-bold">Total amount</span>
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">$45.90</span>
+</div>
+<div class="text-xs text-green-600 dark:text-green-400 font-semibold bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded">
+                    Saving $5.00 today
+                </div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+                Place Order
+                <span class="material-symbols-outlined">chevron_right</span>
+</button>
+<p class="text-center text-[10px] text-slate-400 mt-3 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified_user</span>
+                Secure 256-bit SSL encrypted payment
+            </p>
+</footer>
+</div>
+</body></html>

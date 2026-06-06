@@ -1,0 +1,132 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && (request.auth.token.admin == true || request.auth.token.superAdmin == true);
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isImage() {
+      return request.resource != null
+        && (
+          request.resource.contentType == null ||
+          request.resource.contentType.matches('image/.*')
+        );
+    }
+
+    function isImageOrVideo() {
+      return request.resource != null
+        && request.resource.contentType.matches('image/.*|video/.*');
+    }
+
+    // Product media
+    match /products/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && isImage()
+        && request.resource.size < 10 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Brand media
+    match /brands/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && isImage()
+        && request.resource.size < 10 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Category media
+    match /categories/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && isImage()
+        && request.resource.size < 10 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Subcategory media
+    match /subCategories/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && isImage()
+        && request.resource.size < 10 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Sub-subcategory media
+    match /subSubCategories/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && isImage()
+        && request.resource.size < 10 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Legacy path compatibility (older dashboard uploads)
+    match /subsubcategories/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && isImage()
+        && request.resource.size < 10 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Banner media (image/video)
+    match /banners/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && isImageOrVideo()
+        && request.resource.size < 25 * 1024 * 1024;
+      allow delete: if isAdmin();
+    }
+
+    // Review media: user can upload only inside own uid folder
+    match /reviews/{productId}/{uid}/{allPaths=**} {
+      allow read: if true;
+      allow create, update: if isOwner(uid)
+        && isImageOrVideo()
+        && request.resource.size < 25 * 1024 * 1024
+        ;
+
+      allow delete: if isOwner(uid) || isAdmin();
+    }
+
+    // Support chat media: chats/{chatId}/media/{uid}/...
+    match /chats/{chatId}/media/{uid}/{allPaths=**} {
+      allow read: if isSignedIn();
+
+      allow create, update: if (isOwner(uid) || isAdmin())
+        && isImageOrVideo()
+        && request.resource.size < 25 * 1024 * 1024
+        ;
+
+      allow delete: if isOwner(uid) || isAdmin(); 
+    }
+
+    // Product suggestions media: productSuggestions/{uid}/...
+    match /productSuggestions/{uid}/{allPaths=**} {
+      allow read: if isOwner(uid) || isAdmin();
+
+      allow create, update: if (isOwner(uid) || isAdmin())
+        && isImage()
+        && request.resource.size < 10 * 1024 * 1024;
+
+      allow delete: if isOwner(uid) || isAdmin();
+    }
+
+    // Deny everything else
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

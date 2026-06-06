@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PureCuts Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a855f7",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center justify-between p-4 max-w-2xl mx-auto w-full">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">PureCuts Categories</h1>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full pb-24">
+<div class="px-4 py-4">
+<label class="relative block group">
+<span class="absolute inset-y-0 left-0 flex items-center pl-4 text-primary">
+<span class="material-symbols-outlined">search</span>
+</span>
+<input class="block w-full rounded-xl border-none bg-primary/5 py-3 pl-12 pr-4 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-primary/50 transition-all font-display" placeholder="Search categories..." type="text"/>
+</label>
+</div>
+<div class="px-4 pb-2">
+<p class="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Professional Collections</p>
+<div class="grid grid-cols-2 gap-4">
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">flare</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Hair Care</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">Premium shampoos, masks &amp; conditioners</p>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">palette</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Hair Color</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">Professional tints, dyes &amp; developers</p>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">face</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Skin Care</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">Advanced facials &amp; skin treatments</p>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">content_cut</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Salon Tools</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">High-end scissors, combs &amp; brushes</p>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">chair</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Salon Equipment</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">Styling chairs, basins &amp; units</p>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">work</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Professional Kits</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">All-in-one start-up and stylist sets</p>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">electric_bolt</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Electricals</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">Clippers, dryers &amp; styling irons</p>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-xl border border-primary/10 bg-white dark:bg-slate-900/50 p-5 hover:border-primary/40 hover:shadow-lg transition-all" href="#">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">sanitizer</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight font-display">Hygiene</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal mt-1">Disinfectants &amp; salon safety</p>
+</div>
+</a>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-primary/10 z-50">
+<div class="flex gap-2 px-4 pb-6 pt-3 max-w-2xl mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-none font-display">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<p class="text-[10px] font-bold leading-none font-display">Categories</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="text-[10px] font-medium leading-none font-display">Orders</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-none font-display">Profile</p>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#a855f7",
+              "primary-light": "#c084fc",
+              "background-light": "#f7f5f8",
+              "background-dark": "#191022",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>PureCuts Splash Screen</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-primary to-primary-light">
+<!-- Background decorative elements -->
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+</div>
+<!-- Central Branding Container -->
+<div class="relative z-10 flex flex-col items-center px-6">
+<!-- Icon/Logo Placeholder -->
+<div class="mb-8 flex items-center justify-center w-24 h-24 bg-white/20 backdrop-blur-md rounded-2xl shadow-xl border border-white/30">
+<span class="material-symbols-outlined text-white text-6xl">content_cut</span>
+</div>
+<!-- Brand Name -->
+<h1 class="text-white tracking-tight text-5xl font-bold leading-tight text-center pb-2">
+                PureCuts
+            </h1>
+<!-- Tagline -->
+<p class="text-white/90 text-lg font-medium leading-normal text-center mb-12 tracking-wide uppercase">
+                Premium Professional Grooming
+            </p>
+<!-- Loading Indicator Section -->
+<div class="w-64 max-w-xs flex flex-col gap-4">
+<div class="flex justify-center items-center gap-2">
+<p class="text-white/80 text-sm font-medium leading-normal animate-pulse">Initializing experience</p>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 rounded-full bg-white/20 overflow-hidden">
+<div class="h-full bg-white rounded-full w-1/3 shadow-[0_0_15px_rgba(255,255,255,0.5)]"></div>
+</div>
+</div>
+</div>
+<!-- Bottom subtle branding or version -->
+<div class="absolute bottom-10 left-0 w-full text-center">
+<p class="text-white/60 text-xs font-medium uppercase tracking-widest">Version 2.4.0</p>
+</div>
+<!-- Optional Hero Image Reference as per requirement -->
+<div class="hidden">
+<div class="w-full bg-center bg-no-repeat bg-cover" data-alt="Abstract purple gradient with geometric patterns" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtsudRnfqToN-GwBFcme09L5yaucOixJzsan_AHlmypS4s7iC3J1ApTPrPfGB-Kk_KH2Vsc9YtCyODmcPsYfaAPz9Pd4C1TQPcAOjh1WxPcgnWtG9fdbsc3mazD75MagYCrlbX7i5MOZQX9SZ_EcHo-HKw1IfjV2YZSCWJTOMG7LJFjBpZgoHmXMs0wGRndk8APQrh6-GCMMofQ0eDuheMarN1cnpyFWxutzDmTTC9JTViNnktPJXBI45uXzS_nDa1epofkcNovKGQ");'>
+</div>
+</div>
+</div>
+</body></html>
