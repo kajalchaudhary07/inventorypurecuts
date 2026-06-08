@@ -111,7 +111,7 @@ export default function ProductDetails() {
                     <tr key={v.id || i} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">
                       <td className="py-2.5 pr-4">
                         <p className="font-medium text-slate-900 dark:text-white">
-                          {v.name || v.variantName || v.size || v.label || `Variant ${i + 1}`}
+                          {v.name || v.shadeName || v.variantName || (v.attribute && v.value ? `${v.attribute}: ${v.value}` : null) || v.size || v.label || `Variant ${i + 1}`}
                         </p>
                         {v.color && <p className="text-xs text-slate-400">{v.color}</p>}
                       </td>

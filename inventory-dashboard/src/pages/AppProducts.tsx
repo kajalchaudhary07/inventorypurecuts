@@ -1,7 +1,7 @@
 import { useMemo, useState, useRef, useEffect } from "react";
 import { Package, Search, Plus, ChevronDown, ChevronRight, Trash2, Pencil, FileDown } from "lucide-react";
 import { useDataStore } from "@/store/dataStore";
-import { saveInventoryProduct, deleteInventoryProduct, updateProductField, updateInventoryProductField } from "@/services/data";
+import { saveInventoryProduct, deleteInventoryProduct, updateProductField, updateInventoryProductField, updateVariantField } from "@/services/data";
 import { Button, Card, PageHeader, Input } from "@/components/ui/primitives";
 import { Modal } from "@/components/ui/Modal";
 import { uid, exportCsv } from "@/lib/utils";
@@ -18,12 +18,14 @@ const fmt = (amount: number | undefined | null) => {
 
 function InlineEditCell({
   productId,
+  variantId,
   field,
   value,
   prefix = "₹",
   isAdmin,
 }: {
   productId: string;
+  variantId?: string;
   field: string;
   value: number | undefined | null;
   prefix?: string;
@@ -46,7 +48,8 @@ function InlineEditCell({
     if (!isNaN(num) && num !== value) {
       setSaving(true);
       try {
-        if (isAdmin) await updateProductField(productId, field, num);
+        if (variantId) await updateVariantField(productId, variantId, field, num);
+        else if (isAdmin) await updateProductField(productId, field, num);
         else await updateInventoryProductField(productId, field, num);
       } finally {
         setSaving(false);
@@ -229,20 +232,25 @@ function ManualProductModal({
 
 // ─── Variant Rows ───────────────────────────────────────────────────────────
 
-function VariantRows({ variants, showDelete }: { variants: AnyRecord[]; showDelete?: boolean }) {
+function VariantRows({ productId, variants, showDelete }: { productId: string; variants: AnyRecord[]; showDelete?: boolean }) {
   if (!variants || variants.length === 0) return null;
   return (
     <>
       {variants.map((v) => (
-        <tr key={v.id} className="bg-slate-50 border-t border-dashed border-slate-200">
+        <tr key={v.id} className="bg-slate-50 border-t border-dashed border-slate-200" onClick={(e) => e.stopPropagation()}>
           <td className="pl-14 pr-6 py-2 text-xs text-slate-500">
-            ↳ {v.name || Object.entries(v.attributes || {}).map(([k, val]) => `${k}: ${val}`).join(", ") || v.id}
+            ↳ {v.name || v.shadeName || v.variantName || (v.attribute && v.value ? `${v.attribute}: ${v.value}` : null) || Object.entries(v.attributes || {}).map(([k, val]) => `${k}: ${val}`).join(", ") || v.id}
           </td>
           <td className="px-6 py-2 text-xs text-slate-400 font-mono">{v.sku || "-"}</td>
-          <td className="px-6 py-2 text-xs text-slate-400">-</td>
-          <td className="px-6 py-2 text-xs text-slate-400">-</td>
-          <td className="px-6 py-2 text-xs font-medium">{fmt(v.price ?? v.sellingPrice)}</td>
-          <td className="px-6 py-2 text-xs text-slate-500">{fmt(v.originalPrice ?? v.mrp)}</td>
+          <td className="px-6 py-2 text-xs">
+            <InlineEditCell productId={productId} variantId={v.id} field="costPrice" value={v.costPrice ?? v.cost ?? null} isAdmin />
+          </td>
+          <td className="px-6 py-2 text-xs">
+            <InlineEditCell productId={productId} variantId={v.id} field="price" value={v.price ?? v.sellingPrice ?? null} isAdmin />
+          </td>
+          <td className="px-6 py-2 text-xs">
+            <InlineEditCell productId={productId} variantId={v.id} field="mrp" value={v.originalPrice ?? v.mrp ?? null} isAdmin />
+          </td>
           <td className="px-6 py-2 text-center text-xs">
             {v.stock != null ? (
               <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${v.stock > 0 ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>{v.stock}</span>
@@ -509,7 +517,7 @@ export default function AppProductsPage() {
                           <td className="px-4 py-3" />
                         )}
                       </tr>
-                      {hasVariants && isOpen && <VariantRows variants={product.variants} showDelete={activeTab === "manual"} />}
+                      {hasVariants && isOpen && <VariantRows productId={product.id} variants={product.variants} showDelete={activeTab === "manual"} />}
                     </>
                   );
                 })}

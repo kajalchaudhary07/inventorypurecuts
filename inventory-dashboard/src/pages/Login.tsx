@@ -28,7 +28,7 @@ export default function Login() {
         "auth/wrong-password": "Incorrect password.",
         "auth/too-many-requests": "Too many attempts. Try again later.",
       };
-      setErr(map[code] || "Sign-in failed. Please try again.");
+      setErr(map[code] || (e as { message?: string }).message || "Sign-in failed. Please try again.");
     } finally {
       setBusy(false);
     }
